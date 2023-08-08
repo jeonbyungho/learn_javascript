@@ -15,10 +15,10 @@ async function getRequset(){
       throw new Error('400 또는 500 Error');
    }
    
-   response.json().then( (json) => {
+   response.json().then( json => {
       console.log('price',json['price']);
    });
 }
 
 getRequset();
-getRequset();
+console.log('end');
