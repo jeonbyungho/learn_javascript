@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <form action="/go" name="loginForm" method="post">
+      <label for="userid">이름</label> <input type="text" name="userid" id="userid"/>
+      <label for="password">비밀번호</label> <input type="password" name="password" id="password"/>
+      <button type="submit">로그인</button>
+   </form>
+
+   <script>
+      document.loginForm.onsubmit = (e)=> {
+         e.preventDefault();
+         console.log('버튼 실행');
+         e.target.submit();
+      }
+   </script>
+</body>
+</html>
